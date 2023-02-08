@@ -84,7 +84,15 @@
           "codeCoverage": true
         }
       }
+    },
+    "copy-files": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["node apps/pdf-tron/src/copy-webviewer-files.js"],
+        "parallel": false
+      }
     }
   },
+
   "tags": []
 }
