@@ -169,7 +169,7 @@ export class PdfViewerComponent
       // TODO: I would like to get this to work also
       // const stampedDoc = await this.stampPageNumber(pdfDoc);
       const data = await pdfDoc.saveMemoryBuffer(
-        PDFNet.SDFDoc.SaveOptions.e_linearized
+        PDFNet.SDFDoc.SaveOptions.e_compatibility
       );
       const arr = new Uint8Array(data);
       const blob = new Blob([arr], { type: 'application/pdf' });
